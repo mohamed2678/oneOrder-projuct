@@ -19,7 +19,6 @@ This project is a fully responsive shopping cart application built with Vue.js a
 - **Frontend Framework:** Vue.js (Version 3.x)
 - **State Management:** Vuex (for handling the cart and products)
 - **HTTP Client:** Axios (for API requests to fetch product data)
-- **Routing:** Vue Router (for navigating between different pages)
 - **Styling:** Vanilla CSS for a clean and simple interface
 
 ## Project setup
