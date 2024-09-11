@@ -15,9 +15,7 @@
 
     <!-- The ProductList component that displays all available products -->
     <ProductList />
-
-    <!-- Placeholder for the router view link (ensure it's properly set in your router config) -->
-    <router-link />
+    
   </div>
 </template>
 
