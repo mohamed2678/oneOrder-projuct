@@ -87,6 +87,9 @@ export const mutations = {
     const item = state.cart.find((item) => item.id === productId);
     if (item && item.quantity > 1) {
       item.quantity--;
+    } else {
+      // in Case The product equals 1 by pressing - it will be removed from the cart
+      state.cart = state.cart.filter((item) => item.id !== productId);
     }
   },
 
