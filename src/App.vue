@@ -14,8 +14,7 @@
     </transition>
 
     <!-- The ProductList component that displays all available products -->
-    <ProductList />
-    
+    <ProductList />  
   </div>
 </template>
 
