@@ -14,11 +14,7 @@
     </transition>
 
     <!-- The ProductList component that displays all available products -->
-<<<<<<< HEAD
-    <ProductList />  
-=======
     <ProductList />
->>>>>>> 0f4769c (Update App.vue)
   </div>
 </template>
 

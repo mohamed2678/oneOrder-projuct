@@ -14,9 +14,14 @@
           <div class="info">
             <p>Product {{ product.id }}</p>
             <!-- Button to add the product to the cart -->
-            <button class="btn-add" @click="addToCart(product)">Add +</button>
+            <button class="btn-add" @click="handleAddToCart(product)">
+              Add +
+            </button>
           </div>
         </div>
+      </div>
+      <div class="popup" v-if="showPopup">
+        <p>product Add to Cart</p>
       </div>
     </div>
   </div>
@@ -27,6 +32,11 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "ProductList",
+  data() {
+    return {
+      showPopup: false,
+    };
+  },
   computed: {
     // Mapping Vuex getters to get all products
     ...mapGetters(["allProducts"]),
@@ -37,6 +47,13 @@ export default {
   methods: {
     // Mapping Vuex actions to fetch products and add to cart
     ...mapActions(["fetchProducts", "addToCart"]),
+    handleAddToCart(product) {
+      this.addToCart(product);
+      this.showPopup = true;
+      setTimeout(() => {
+        this.showPopup = false;
+      }, 2000);
+    },
   },
   created() {
     // Fetch products when the component is created
